@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John</title>
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+   <div class="card">
+     <img src="john.png" alt="John's Photo" class="profile-pic">
+     <h1>John Tom</h1>
+     <p class="title">Frontend Developer</p>
+     <p class="title">I'm a passionate Frontend Developer skilled in crafting accessible, <br>responsive, and user-friendly web experiences using HTML, CSS, and JavaScript. I thrive on building clean, efficient interfaces and love tackling complex challenges to deliver impactful solutions.</p>
+     <!-- Hobbies section -->
+     <div class="hobbies">
+       <h3>Hobbies</h3>
+       <ul>
+         <li>Coding</li>
+         <li>Football</li>
+         <li>Reading</li>
+         <li>Gaming</li>
+       </ul>
+     </div>
+      <!-- Current time -->
+     <p class="time">Current time: <span id="current-time">—</span></p>
+
+     <div class="social-icons">
+       <a href="https://github.com/tom2010" target="_blank">
+         <i class="fab fa-github"></i>
+       </a>
+       <a href="https://x.com/Bliss_john20" target="_blank">
+         <i class="fab fa-twitter"></i>
+       </a>
+       <a href="https://www.linkedin.com/in/john-tom/" target="_blank">
+         <i class="fab fa-linkedin"></i>
+       </a>
+     </div>
+    </div>
+     <script>
+      // Update the time every second
+      function updateTime() {
+        const el = document.getElementById('current-time');
+        const now = new Date();
+        el.textContent = now.toLocaleTimeString();
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
